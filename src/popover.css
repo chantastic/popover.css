@@ -1,0 +1,43 @@
+[data-has-popover] {
+  position: relative;
+  cursor: default;
+}
+
+[data-has-popover] .popover {
+  top: 100%;
+}
+
+.popover {
+  position: absolute;
+}
+
+.popover {
+  margin-top: 10px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+}
+
+.popover::before,
+.popover::after {
+  position: absolute;
+    top: -.5em;
+    left: 1em;
+  width:  1em;
+  height: 1em;
+  content: "";
+}
+
+.popover::before {
+  background-color: #ddd;
+  -webkit-transform: rotate(45deg) translate(-1px, -1px);
+      -ms-transform: rotate(45deg) translate(-1px, -1px);
+          transform: rotate(45deg) translate(-1px, -1px);
+}
+
+.popover::after {
+  background-color: white;
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
