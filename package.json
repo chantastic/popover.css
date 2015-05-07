@@ -1,0 +1,24 @@
+{
+  "name": "popover.css",
+  "version": "0.0.1",
+  "description": "popover styles",
+  "main": "src/popover.css",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/chantastic/popover.css.git"
+  },
+  "keywords": [
+    "css",
+    "popover",
+    "styles"
+  ],
+  "author": "Michael Chan",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/chantastic/popover.css/issues"
+  },
+  "homepage": "https://github.com/chantastic/popover.css"
+}
