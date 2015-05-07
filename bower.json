@@ -1,0 +1,23 @@
+{
+  "name": "popover.css",
+  "version": "0.0.1",
+  "homepage": "https://github.com/chantastic/popover.css",
+  "description": "popover styles",
+  "main": "src/popover.css",
+  "keywords": [
+    "css",
+    "popover",
+    "styles"
+  ],
+  "authors": [
+    "Michael Chan"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
