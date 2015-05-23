@@ -30,6 +30,20 @@
   visibility: visible;
 }
 
+[data-has-popover]::before {
+  position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  content: " ";
+  visibility: hidden;
+}
+
+[data-has-popover~=open]::before {
+  visibility: visible;
+}
+
 .popover {
   margin-top: 10px;
   padding: 10px;
