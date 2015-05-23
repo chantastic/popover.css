@@ -9,6 +9,16 @@
 
 .popover {
   position: absolute;
+  visibility: hidden;
+}
+
+/*
+ * experimental:
+ * :hover is not a good interaction but i'd
+ * like to know what an API would look like
+ * */
+[data-has-popover~=hover]:hover .popover {
+  visibility: visible;
 }
 
 .popover {
