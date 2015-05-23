@@ -4,11 +4,21 @@
     <link rel="stylesheet" href="./src/popover.css" />
   </head>
 <body>
-  <div data-has-popover="hover">
+  <div data-has-popover="open" onclick="togglePopover(this)">
     Some content
     <div class="popover">
       popover
     </div>
   </div>
+
+  <script type="text/javascript">
+    function getToggledPopoverState(el) {
+      return (el.dataset.hasPopover) ? "" : "open";
+    }
+
+    function togglePopover(el) {
+      el.dataset.hasPopover = getToggledPopoverState(el);
+    }
+  </script>
 </body>
 </html>

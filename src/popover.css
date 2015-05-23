@@ -1,6 +1,11 @@
 [data-has-popover] {
   position: relative;
   cursor: default;
+
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 [data-has-popover] .popover {
@@ -18,6 +23,10 @@
  * like to know what an API would look like
  * */
 [data-has-popover~=hover]:hover .popover {
+  visibility: visible;
+}
+
+[data-has-popover~=open] .popover {
   visibility: visible;
 }
 
