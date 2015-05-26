@@ -56,23 +56,27 @@
 .popover::before,
 .popover::after {
   position: absolute;
-    top: -.5em;
-    left: 1em;
-  width:  1em;
-  height: 1em;
+    top: -8px;
+    left: 16px;
+  width: 0;
+  height: 0;
+
+  border: 8px solid transparent;
   content: "";
 }
 
 .popover::before {
-  background-color: #ddd;
-  -webkit-transform: rotate(45deg) translate(-1px, -1px);
-      -ms-transform: rotate(45deg) translate(-1px, -1px);
-          transform: rotate(45deg) translate(-1px, -1px);
-}
-
-.popover::after {
-  background-color: white;
+  border-top-color: #ddd;
+  border-left-color: #ddd;
   -webkit-transform: rotate(45deg);
       -ms-transform: rotate(45deg);
           transform: rotate(45deg);
+}
+
+.popover::after {
+  border-top-color: #fff;
+  border-left-color: #fff;
+  -webkit-transform: rotate(45deg) translate(1px, 1px);
+      -ms-transform: rotate(45deg) translate(1px, 1px);
+          transform: rotate(45deg) translate(1px, 1px);
 }
