@@ -48,7 +48,6 @@
 
 .popover {
   margin-top: 10px;
-  padding: 10px;
   border: 1px solid #ddd;
   border-radius: 3px;
 }
@@ -79,4 +78,8 @@
   -webkit-transform: rotate(45deg) translate(1px, 1px);
       -ms-transform: rotate(45deg) translate(1px, 1px);
           transform: rotate(45deg) translate(1px, 1px);
+}
+
+.popover_content {
+  margin: 10px;
 }
