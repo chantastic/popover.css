@@ -17,10 +17,21 @@
 .popover {
   position: absolute;
   visibility: hidden;
+  opacity: 0;
+
+  -webkit-transition: all .12s cubic-bezier(0.250, 0.460, 0.450, 0.940);
+          transition: all .12s cubic-bezier(0.250, 0.460, 0.450, 0.940);
+
+  -webkit-transform: translateY(-8px);
+          transform: translateY(-8px);
 }
 
 [data-has-popover~=open] .popover {
   visibility: visible;
+  opacity: 1;
+
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
 }
 
 [data-has-popover]::before {
@@ -31,10 +42,12 @@
     left: 0;
   content: " ";
   visibility: hidden;
+  opacity: 0;
 }
 
 [data-has-popover~=open]::before {
   visibility: visible;
+  opacity: 1;
 }
 
 .popover {
