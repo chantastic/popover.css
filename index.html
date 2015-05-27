@@ -4,7 +4,7 @@
     <link rel="stylesheet" href="./src/popover.css" />
   </head>
 <body>
-  <div data-has-popover="open" onclick="togglePopover(this)">
+  <div data-has-popover="open">
     Some content
     <div class="popover" data-popover="color-bar dark-border">
       <div class="popover_colorbar"></div>
@@ -14,14 +14,7 @@
     </div>
   </div>
 
-  <script type="text/javascript">
-    function getToggledPopoverState(el) {
-      return (el.dataset.hasPopover) ? "" : "open";
-    }
-
-    function togglePopover(el) {
-      el.dataset.hasPopover = getToggledPopoverState(el);
-    }
-  </script>
+  <script src="http://code.jquery.com/jquery-2.1.4.js"></script>
+  <script src="./src/popover.js"></script>
 </body>
 </html>
