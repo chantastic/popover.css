@@ -48,8 +48,22 @@
 
 .popover {
   margin-top: 10px;
-  border: 1px solid #ddd;
+  border: 1px solid #888;
   border-radius: 3px;
+}
+
+.popover[data-popover~=color-bar]::after {
+  border-left-color: purple;
+  border-top-color: purple;
+}
+
+.popover[data-popover~=dark-border] {
+  border-color: #666;
+}
+
+.popover[data-popover~=dark-border]::before {
+  border-left-color: #666;
+  border-top-color: #666;
 }
 
 .popover::before,
@@ -65,8 +79,8 @@
 }
 
 .popover::before {
-  border-top-color: #ddd;
-  border-left-color: #ddd;
+  border-top-color: #888;
+  border-left-color: #888;
   -webkit-transform: rotate(45deg);
       -ms-transform: rotate(45deg);
           transform: rotate(45deg);
@@ -82,4 +96,11 @@
 
 .popover_content {
   margin: 10px;
+}
+
+.popover_colorbar {
+  height: 4px;
+  margin-bottom: -4px;
+  background-color: purple;
+  border-radius: 2px 2px 0 0;
 }
