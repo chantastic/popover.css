@@ -10,6 +10,19 @@
           user-select: none;
 }
 
+[data-has-popover]::before {
+  position: fixed;
+  top: 0; right: 0; bottom: 0; left: 0;
+  visibility: hidden;
+  content: " ";
+  opacity: 0;
+}
+
+[data-has-popover~=open]::before {
+  visibility: visible;
+  opacity: 1;
+}
+
 [data-has-popover] .popover {
   top: 100%;
 }
@@ -34,57 +47,30 @@
           transform: translateY(0);
 }
 
-[data-has-popover]::before {
-  position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-  content: " ";
-  visibility: hidden;
-  opacity: 0;
-}
-
-[data-has-popover~=open]::before {
-  visibility: visible;
-  opacity: 1;
-}
-
 .popover {
   margin-top: 10px;
-  border: 1px solid #888;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #888;
   border-radius: 3px;
   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.15);
-}
-
-.popover[data-popover~=colorbar]::after {
-  border-left-color: purple;
-  border-top-color: purple;
-}
-
-.popover[data-popover~=dark-border] {
-  border-color: #666;
-}
-
-.popover[data-popover~=dark-border]::before {
-  border-left-color: #666;
-  border-top-color: #666;
 }
 
 .popover::before,
 .popover::after {
   position: absolute;
-    top: -8px;
-    left: 16px;
+  top: -8px; left: 16px;
   width: 0;
   height: 0;
 
-  border: 8px solid transparent;
+  border-width: 8px;
+  border-style: solid;
+  border-color: transparent;
   content: "";
 }
 
 .popover::before {
-  border-top-color: #888;
+  border-top-color:  #888;
   border-left-color: #888;
   -webkit-transform: rotate(45deg);
       -ms-transform: rotate(45deg);
@@ -92,11 +78,25 @@
 }
 
 .popover::after {
-  border-top-color: #fff;
+  border-top-color:  #fff;
   border-left-color: #fff;
   -webkit-transform: rotate(45deg) translate(1px, 1px);
       -ms-transform: rotate(45deg) translate(1px, 1px);
           transform: rotate(45deg) translate(1px, 1px);
+}
+
+.popover[data-popover~=colorbar]::after {
+  border-top-color:  purple;
+  border-left-color: purple;
+}
+
+.popover[data-popover~=dark-border] {
+  border-color: #666;
+}
+
+.popover[data-popover~=dark-border]::before {
+  border-top-color:  #666;
+  border-left-color: #666;
 }
 
 .popover_content {
@@ -104,8 +104,8 @@
 }
 
 .popover_colorbar {
-  height: 4px;
   margin-bottom: -4px;
-  background-color: purple;
+  height: 4px;
   border-radius: 2px 2px 0 0;
+  background-color: purple;
 }
