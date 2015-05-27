@@ -57,7 +57,7 @@
   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.15);
 }
 
-.popover[data-popover~=color-bar]::after {
+.popover[data-popover~=colorbar]::after {
   border-left-color: purple;
   border-top-color: purple;
 }
